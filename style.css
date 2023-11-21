@@ -1,3 +1,9 @@
+  * { /* Rejeitando os espaçamentos padrões do navegador */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*adotar medidas a partir da borda */
+  }
+  
   body {
     /*
     background-image: url(./assets/bg-mobile.jpg);
@@ -9,3 +15,33 @@
     background: color image repeat position/size */
     background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
   }
+
+  body * {
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+  }
+
+  #container {
+    width: 360px;
+    border: 1px solid red;
+    margin: 56px auto 0px; /* aplicará 56px em cima, auto nas laterais e 0px em baixo */
+  }
+
+  #profile {
+    text-align: center;
+    padding: 24px;
+  }
+
+  #profile img {
+    width: 112px; /* A altura geralmente não precisa ser definida, pois ela segue a página */
+    /*margin: auto;  Em elementos inline não é possível aplicar margin auto, por isso transformar em block, ou aplicar no seu elemento pai (profile) 
+    display: block; */
+  }
+
+  #profile p {
+    font-weight: 500;
+    font-size: 16px; /* tamanho de 16px já vem por padrão, então não precisaria ser declarado */
+    line-height: 24px;
+    margin-top: 8px;
+  }
+
