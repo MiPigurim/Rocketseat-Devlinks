@@ -3,6 +3,25 @@
     padding: 0;
     box-sizing: border-box; /*adotar medidas a partir da borda */
   }
+
+  :root {
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.50);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(255, 255, 255, 0.1);
+
+  }
+
+  .light {
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.50);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+  }
   
   body {
     /*
@@ -13,12 +32,12 @@
 
     /* Agrupando:
     background: color image repeat position/size */
-    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    background: var(--bg-url) no-repeat top center/cover;
   }
 
   body * {
     font-family: 'Inter', sans-serif;
-    color: #FFFFFF;
+    color: var(--text-color);
   }
 
   #container {
@@ -63,8 +82,8 @@
     align-items: center; /* alinhando o item no eixo y */
     padding: 16px 24px;
 
-    background: rgba(255, 255, 255, 0.10); /* 0.1 é a transparência */
-    border: 1px solid rgba(255, 255, 255, 0.50);
+    background: var(--surface-color); /* 0.1 é a transparência */
+    border: 1px solid var(--stroke-color);
     border-radius: 8px;
     -webkit-backdrop-filter: blur(4px);
 
@@ -76,8 +95,8 @@
 
   /* pseudo-selector - aplica quando passar o mouse em cima*/
   ul li a:hover {
-    border: 1.5px solid white;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
   }
 
   /* Social links */
@@ -100,8 +119,7 @@
   }
 
   #social-links a:hover {
-    background: rgba(255, 255, 255, 0.20);
-    padding: 16px;
+    background: var(--highlight-color);
   }
 
   footer {
