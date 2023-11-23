@@ -42,7 +42,8 @@
   }
 
   #container {
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     /* border: 1px solid red; */
     margin: 56px auto 0px; /* aplicará 56px em cima, auto nas laterais e 0px em baixo */
     padding: 0 24px;
